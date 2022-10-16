@@ -51,7 +51,7 @@ int main(){
 //                                  //第二个为输出型参数 退出码或信号
 //                                   //第三个为等待模式 0 为阻塞等待 WNOHANG 为非阻塞等待
 //      if(ret>0){
-//       // printf("等待成功： pid:%d  exit sig: %d exit code:%d  \n",ret,sta&0x7F,sta>>8&0xFF);//低七位和高八位表示退出码或者信号
+//       // printf("等待成功： pid:%d  exit sig: %d exit code:%d  \n",ret,sta&0x7F,sta>>8&0xFF);//低七位和高八位表示信号 ， 退出码
 //                                                                                            //如果正常退出那高八位就是0 没有0号信号
 //      //位运算有学习成本 因此系统提供了宏
 //       if(WIFEXITED(sta))//这个宏可以检查是否正常退出
