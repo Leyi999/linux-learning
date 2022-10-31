@@ -35,19 +35,19 @@ void memu() {
 	printf("*************************\n");
 }
 void game() {
-	printf("²Â²ÂÊı×Ö(0¡«100):>");
+	printf("çŒœçŒœæ•°å­—(0ï½100):>");
 	int a = rand()%100, guess;
 	while (1)
 	{
 		scanf("%d", &guess);
 		if (guess < a) {
-			printf("²ÂĞ¡ÁË\nÔÙ²Â²Â:>");
+			printf("çŒœå°äº†\nå†çŒœçŒœ:>");
 		}
 		else if (guess > a) {
-			printf("²Â´óÁË\nÔÙ²Â²Â:>");
+			printf("çŒœå¤§äº†\nå†çŒœçŒœ:>");
 		}
 		else {
-			printf("\n\nÀ÷º¦,²Â¶ÔÁË!!!\n\n");
+			printf("\n\nå‰å®³,çŒœå¯¹äº†!!!\n\n");
 			sign();
 			break;
 		}
@@ -58,7 +58,7 @@ int main() {
 	srand((unsigned int)time(NULL));
 	do {
 		memu();
-		printf("ÇëÑ¡ÔñĞòºÅ:");
+		printf("è¯·é€‰æ‹©åºå·:");
 		scanf("%d",& input);
 		switch (input)
 		{
@@ -66,10 +66,10 @@ int main() {
 			game();
 			break;
 		case 0:
-			printf("ÓÎÏ·½áÊø£¬³ÌĞòÍË³ö");
+			printf("æ¸¸æˆç»“æŸï¼Œç¨‹åºé€€å‡º");
 			break;
 		default:
-			printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë\n");
+			printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥\n");
 			break;
 		}
 	} while (input);
