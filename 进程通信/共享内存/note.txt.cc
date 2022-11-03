@@ -11,8 +11,9 @@ int shmget(key,size(byte),shmflg)
         mode : accsse mode of m   use as IPC_CREAT | IPC_EXCL |0666
     ->RET : shmid is returned ,-1 is returned if error occurs
     a prosses creat a shm doset mean it owns the shm 
-    if a prosses want to use the shm ,it needs to get attach before and deattach after using(or automatically deattach when prosses exits );
-void* shmat(int shmid,void* pos,int mode) -> shmat(shmid,nullptr, 0) return shm or -1
+    if a prosses want to use the shm ,it needs to get attach to shm with shmid before and deattach after using(or automatically deattach when prosses exits );
+void* shmat(int shmid,void* pos,int mode) -> shmat(shmid,nullptr, 0) default pos and default mode(R&W)
+     return shm or -1
 int shmdt(void* shm); return >0 or -1
 
 int shmctl(id,cmd,shmid_ds*buf) 
