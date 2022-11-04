@@ -1,0 +1,6 @@
+mkfifo(path,mode) return 0 or -1 errno EEXIST
+open(path,O_WRONLY)
+write(fd,buffer,size)
+open(path,O_O_RDONLY)
+read(fd,buffer,size)
+close close

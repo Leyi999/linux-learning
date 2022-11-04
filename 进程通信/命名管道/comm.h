@@ -1,6 +1,6 @@
 #pragma once
 #include<cstring>
-#include <errno.h>
+#include<cerrno>
 #include<iostream>
 #include<sys/types.h>
 #include<sys/fcntl.h>
