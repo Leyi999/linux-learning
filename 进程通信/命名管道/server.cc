@@ -1,6 +1,13 @@
 #include"comm.h"
 using namespace std;
 int main(){
+    //创建或者获取管道
+    umask(0);
+    int fifo_ret=mkfifo(fifo_path, 0666);//成功返回0 已经存在返回-1
+    if(fifo_ret==-1&&errno!=EEXIST){
+        cerr<<"创建获取管道失败！"<<endl;
+        exit(1);
+    }
     //打开管道
     int fd=open(fifo_path,O_RDONLY);
     if(fd<0){
